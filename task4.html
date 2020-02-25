@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rei="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+<form action="" name="login" onsubmit="return validform()">
+    <label for="username">UserName</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="user"><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password"><br>
+    <input type="submit" value="submit" name="submit">
+</form>
+<script>
+    function validform(){
+        var UserName=document.getElementById("username").value;
+        var Email=document.getElementById("email").value;
+        var password=document.getElementById("password").value;
+        event.preventDefault();
+        if(UserName.length == ''||UserName.length == ''||UserName.length<6||!isNaN(UserName)){
+            alert('username should not be blank');
+            return false;
+        }
+        
+        else {
+            alert('submitted form');
+            return true;
+        }
+
+       
+
+        
+
+
+    }
+</script>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

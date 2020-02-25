@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="row">
+                <button type="button" class="btn btn-warning mx-2" id="option1">html</button>
+                <button type="button" class="btn btn-primary mx-2" id="option2">css</button>
+                <button type="button" class="btn btn-danger mx-2" id="option3">javascript</button>
+                <button type="button" class="btn btn-success mx-2" id="option4">bootstrap</button>
+                <button type="button" class="btn btn-secondary mx-2" id="option5">jquery</button>  
+        </div>
+    </nav>
+    <div class="container">
+    <div class="row">
+        <div class="col-8">
+            <section id="html" class="article">
+                <h1><span id="header"> Html</span></h1>
+                <p>Hypertext Markup Language, a standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
+                    "an HTML file"</p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <section id="css"  class="article">
+                <h1> <span id="head">Css</span></h1>
+                <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript</p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <section id="javaScript"  class="article">
+                <h1>JavaScript</h1>
+                <p>JavaScript, often abbreviated as JS, is an interpreted programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. </p>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <section id="bootstrap"  class="article">
+                <h1>Bootstrap</h1>
+                <p>a technique of loading a program into a computer by means of a few initial instructions which enable the introduction of the rest of the program from an input device.</p>
+            </section>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-8">
+            <section id="jquery"  class="article">
+                <h1>Jquery</h1>
+                <p>DescriptionjQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of May 2019, jQuery is used by 73% of the 10 million most popular websites.</p>
+            </section>
+        </div>
+    </div>
+    </div>
+    
+    <script>
+        var hideAll = function (){
+    var selectElements = document.querySelectorAll('.article' );
+     for(var i=0 ; i< selectElements.length ; i++){
+        selectElements[i].style.display = 'none';
+       }
+    }
+    hideAll();
+    document.getElementById('option1').addEventListener('click' , fun1);
+    document.getElementById('option2').addEventListener('click' ,  fun2);
+    document.getElementById('option3').addEventListener('click' ,  fun3);
+    document.getElementById('option4').addEventListener('click' ,  fun4);
+    document.getElementById('option5').addEventListener('click' ,  fun5);
+    function fun1(){
+        hideAll();
+        document.getElementById('html').style.display ='block';
+        document.getElementById('header').innerHTML = 'html5';
+    }
+    function fun2(){
+        hideAll();
+        document.getElementById('css').style.display ='block';
+        // document.getElementById('head').innerHTML="css3"
+    }
+    function fun3(){
+        hideAll();
+        document.getElementById('javaScript').style.display ='block';
+    }
+    function fun4(){
+        hideAll();
+        document.getElementById('bootstrap').style.display ='block';
+    }
+    function fun5(){
+        hideAll();
+        document.getElementById('jquery').style.display ='block';
+    }
+    
+    
+    </script>
+    <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

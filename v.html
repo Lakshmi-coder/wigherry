@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rei="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <form action="" name="form" onsubmit="return validForm()">
+        <!-- <label>Username</label>
+        <input type="text" id="username" name=""><br>
+        <label>Mobile number</label>
+        <input type="number" id="mn" name=""><br>
+        <label>Age</label>
+        <input type="text" id="age" name=""><br>
+        <label>password</label>
+        <input type="password" id="pwd" name=""><br>
+        <label>confirm password</label>
+        <input type="password" id="cpwd" name=""><br>
+        <input type="submit" value="submit"> -->
+        <label for="user">user</label>
+        <input type="text" id="user">
+        <label for="gender">gender</label>
+        <input type="radio" name="gender" id="gender" value = "male">male
+        <input type="radio" name="gender"  id="gender" value = "female">female <br>
+        <label for="">hobbies</label>
+        <input type="checkbox" name="checkbox" value="ckricket"> ckricket
+        <input type="checkbox" name="checkbox" value="koko"> koko
+        <input type="checkbox" name="checkbox" value="kabadi"> kabadi <br>
+        <label for="">select district</label> 
+        <select name="" id="dist">
+            <option value=""></option>
+            <option value="chittor">chittor</option>
+            <option value="kadapa">kadapa</option>
+            <option value="ananthapoor">ananthapoor</option>
+        </select> <br>
+        <input type="submit" value="submit">
+        
+        
+    </form>
+    <script>
+        function validForm() {
+            var dist = document.getElementById('dist').value;
+         if(form.gender[0].checked == false && form.gender[1].checked == false){
+                alert('please select gender');
+                return false;
+            }
+            else if(form.checkbox[0].checked == false && form.checkbox[1].checked == false && form.checkbox[2].checked == false){
+                alert('select any one of the given option');
+                return false;
+            }
+            else if(dist == ''){
+                alert('select the dist');
+                return false;
+            }
+            else{
+                alert('all fields are selected');
+            }
+        }
+        //      var UserName = document.getElementById("username").value;
+        //      var MobileNumber= document.getElementById('mn').value;
+        //      var Age = document.getElementById('age').value;
+        //      var Password = document.getElementById("pwd").value;
+        //     var ConfirmPassword=document.getElementById("cpwd").value;
+        //     event.preventDefault();
+        //      if (UserName != "admin@123") {
+        //         alert('invalid name, please must be enter admin@123');
+        //         return false;
+        //     }
+
+        //     else if(!isNaN(UserName)){
+        //         alert('please enter letters only');
+        //         return false;
+        //     }
+          
+        //     else if (MobileNumber.length < 10) {
+        //         alert('invalid mobilenumber,please enter 10 digits mobile number');
+        //         return false;
+        //     }
+
+
+        //      if(isNaN(Age)){
+        //         alert('please enter only numbers');
+        //        return false;
+        //     }
+        //     else if (Password.length < 8) {
+        //         alert('please Enter 8 or 10 digit password');
+        //         return false;
+        //     }
+        //     else if(Password.length > 10){
+        //         alert('please Enter 8 or 10 digit password');
+        //         return false;
+            
+        //     }
+
+        //     else if (ConfirmPassword != Password){
+        //         alert('enter 10 digits confirm password')
+        //     }
+        //     else {
+        //         alert('submitted the form');
+        //         return true;
+        //     }
+        // }
+
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

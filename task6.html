@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 id="clickeevent">events</h2>
+    <form action="">
+       username <input type="text" id="user">
+      input username <input type="text" id="user2"> <br>
+       
+      <input type="radio" id="male" name="gender">male
+      <input type="radio" id="female" name="gender">female <br>
+      <select name="" id="state">
+          <option>telangana</option>
+          <option>andrapradesh</option>
+          <option>karnataka</option>
+      </select>
+
+     selected state is :  <span id="error"></span>
+    </form>
+
+    <script> 
+
+        document.getElementById('user').addEventListener('change' , fun);
+
+        function fun(){
+            document.getElementById('user2').innerHTML = document.getElementById('user').value;
+        }
+
+
+
+
+        // document.getElementById('clickeevent').addEventListener('click' , fun);
+        // document.getElementById('clickeevent').addEventListener('dblclick' , fun);
+        // document.getElementById('clickeevent').addEventListener('mouseover' , fun);
+        // document.getElementById('clickeevent').addEventListener('mouseout' , fun2);
+        // document.getElementById('user').addEventListener('focus' , fun);
+        // document.getElementById('user').addEventListener('blur' , fun1);
+        // document.getElementById('state').addEventListener('change' , fun);
+        // document.getElementById('female').addEventListener('change' , fun);
+        // document.getElementById('male').addEventListener('change' , fun);
+
+        // function fun(){
+        //   
+        //   document.getElementById('error').innerHTML = document.getElementById('state').value;
+           
+        // }
+
+        // window.addEventListener('contextmenu' , fun);
+        // window.addEventListener('copy' , fun);
+        // window.addEventListener('cut' , fun);
+        // window.addEventListener('paste' , fun);
+        // function fun(){
+        //     alert('hello you have right cliked the document');
+        // }
+
+        // function fun(){
+        //     alert('cut copy paste disabled');
+        // }
+
+       
+      
+    </script>
+
+
+</body>
+</html>

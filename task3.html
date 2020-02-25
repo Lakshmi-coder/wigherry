@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rei="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form action="" name="form" onsubmit="return validForm()">
+                    <label for="">UserName</label>
+                    <input type="text" id="username" name=""><br>
+                    <label for="">MobileNumber</label>
+                    <input type="text" id="mobilenumber" name=""><br>
+                    <label for="">password</label>
+                    <input type="password" id="password" name=""><br>
+                    <label for="">ConfirmPassword</label>
+                    <input type="password" id="confirmpassword" name=""><br>
+
+                    <label for="gender">Gender</label>
+                    <input type="radio" name="gender"  value="male">Male
+                    <input type="radio" name="gender"  value="female">Female<br>
+                    <label for="checkbox">hobbies</label>
+                    <input type="checkbox" name="checkbox" value="koko" id="hobbies">koko
+                    <input type="checkbox" name="checkbox" value="ckricket" id="hobbies">ckricket
+                    <input type="checkbox" name="checkbox" value="kabadi " id="hobbies">kabadi<br>
+                    <label for="">select district</label>
+                    <select name="" id="district">
+                        <option value=""></option>
+                        <option value="c">chittor</option>
+                        <option vlaue="k">kadapa</option>
+                        <option value="n">nellore</option>
+                    </select> <br>
+                    <label>pincode</label>
+                    <input type="text" id="pincode" name=""> <br>
+                    <input type="submit" value="submit" name="">
+                </form>
+            </div><br>
+            <div class="col-6">
+                <form action = "check.html" name="login" onsubmit="return validationform()">
+                
+                    <label for="">UserName</label>
+                    <input type="text" id="user" name=""><br>
+                    <label for="">password</label>
+                    <input type="password" id="pass" name=""><br>
+                    <input type="submit" value="submit" name="">
+                </form>
+            </div>
+        </div>
+    </div>
+
+            <script>
+                function validForm() {
+                    var UserName = document.getElementById("username").value;
+                    var MobileNumber = document.getElementById("mobilenumber").value;
+                    var password = document.getElementById("password").value;
+                    var confirmPassword = document.getElementById("confirmpassword").value;
+                    // var Gender = document.getElementById("gender").value;
+                    // var hobbies = document.getElementById("hobbies").value;
+                    var district = document.getElementById("district").value;
+                    var pincode = document.getElementById("pincode").value;
+                    event.preventDefault();
+                    if (UserName == '') {
+                        alert('please fill the username');
+                        return false;
+                    }
+                    else if (!isNaN(UserName)) {
+                        alert('please enter letters only');
+                        return false;
+                    }
+                    else if (MobileNumber.length < 10) {
+                        alert('invalid mobilenumber,please enter 10 digits mobile number');
+                        return false;
+                    }
+                    else if (isNaN(MobileNumber)) {
+                        alert('please enter numbers only')
+                        return false;
+                    }
+                    else if(password.length < 8){
+                        alert('please Enter 8 characters password');
+                        return false;
+                    } 
+                    else if(password.length > 10){
+                        alert('please Enter 8 characters password');
+                        return false;
+                    }
+                    else if(confirmPassword != password){
+                        alert('please enter confirm password');
+                        return false;
+                    }
+                    // else if(form.gender[0].checked == false && form.gender[1].checked == false) {
+                    //     alert('please select gender');
+                    //     return false;
+                    // }
+                    else if(form.gender[0].checked == false && form.gender[1].checked == false){
+                        alert('select gender');
+                        return false;
+                    }
+
+                    else if (form.checkbox[0].checked == false && form.checkbox[1].checked == false && form.checkbox[2].checked == false) {
+                        alert('select any one of the given option')
+                        return false;
+                    }
+                    else if (district == '') {
+                        alert('select the district');
+                        return false;
+                    }
+                    else if (pincode.length < 6) {
+                        alert('invalid pincode,please enter 6 digits pincode');
+                        return false;
+                    }
+                    else if (isNaN(pincode)) {
+                        alert('please enter numbers only')
+                        return false;
+                    }
+
+                    else {
+                        alert('submitted the form');
+                        return true;
+                    }
+
+                }
+            </script>
+            <script>
+                function validationform(){
+                    var User = document.getElementById("user").value;
+                    var pass = document.getElementById("pass").value;
+                    event.preventDefault();
+                    if (User != "admin") {
+                        alert('please Enter correct user name');
+                        return false;
+                    }
+                    else if(pass != "admin@123"){
+                        alert('Please enter correct password');
+                        return false;
+                    }
+                    else{
+                        alert('submitted');
+                        return true;
+        
+                    }
+                }
+            </script>
+     
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

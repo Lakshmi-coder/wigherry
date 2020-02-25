@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <form action="" name="form" id="register" onsubmit="return validForm()">
+                    <label for="" class="mt-5">UserName</label>
+                    <input type="text" id="username" name=""><br>
+                    <label for="">password</label>
+                    <input type="password" id="password" name=""><br>
+                    <label for="">mobilenumber</label>
+                    <input type="number" id="mobile" name=""><br>
+                    <input type="submit" value="submit" name="submit">
+                    <!-- <a id="register" onclick=return false href="">already register</a> -->
+                    <button type="button" id="loginbutton">login</button>
+                    </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <form id="loginForm" onsubmit="return validationForm()">
+                    <label for="" class="mt-5">UserName</label>
+                    <input type="text" id="user" name=""><br>
+                    <label for="">password</label>
+                    <input type="password" id="pwd" name=""><br>
+                    <input type="submit" value="submit" name="submit">
+                    <button type="button" id="registerbutton">already register</button> 
+                    <!-- <a id="registerbutton" href="">register now</a> -->
+                    </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        //   document.getElementById('register').style.display='none';
+        //   document.getElementById('login').style.display='none';
+
+        //   document.getElementById('').addEventListener('click', register);
+        //    document.getElementById('').addEventListener('click', login);
+        //   function register() {
+        //     document.getElementById('registerbutton').style.display = 'none';
+        // }
+
+        // function login() {
+        //     document.getElementById('loginbutton').style.display = 'block';
+        // }
+
+
+
+        // function validForm() {
+        //     var UserName = document.getElementById("username").value;
+        //     var Password = document.getElementById("password").value;
+        //     var MobileNumber = document.getElementById("mobile").value;
+        //     event.preventDefault();
+        //     if (UserName == '') {
+        //         alert('please enter username');
+        //         return false;
+        //     }
+        //     else if (Password.length < 8) {
+        //         alert('please password');
+        //         return false;
+        //     }
+        //     else if (MobileNumber.length < 10) {
+        //         alert('invalid mobile number,please enter 10digits mobile number');
+        //         return false;
+        //     }
+        //     else {
+        //         alert('submitted form');
+        //         return true;
+        //     }
+        // }
+
+
+document.getElementById('register').style.display='none';
+// document.getElementById('loginForm').style.display='none';
+
+document.getElementById('registerbutton').addEventListener('click' , log);
+ function log(){
+     document.getElementById('register').style.display='block';
+     document.getElementById('loginForm').style.display='none';
+ }
+document.getElementById('loginbutton').addEventListener('click' , log1 );
+function log1(){
+    document.getElementById('loginForm').style.display="block";
+    document.getElementById('register').style.display="none";
+
+}
+
+        // function validationForm() {
+        //     var UserName = document.getElementById("user").value;
+        //     var Password = document.getElementById("pwd").value;
+        //     event.preventDefault();
+        //     if (UserName == '') {
+        //         alert('please enter username');
+        //         return false;
+        //     }
+        //     else if (Password.length < 8) {
+        //         alert('please password');
+        //         return false;
+        //     }
+
+        //     else {
+        //         alert('submitted form');
+        //         return true;
+        //     }
+        // }
+        // function hide(){
+
+        
+        // document.getElementById('').style.display = 'block';
+        // document.getElementById('password').style.display = 'block';
+        // document.getElementById('').addEventListener('click' , fun1);
+        // }
+        // document.getElementById('validform').addEventListener('click', register);
+        // document.getElementById('validation form').addEventListener('click', login);
+        // function register() {
+        //     document.getElementById('validform').style.display = 'none';
+        // }
+
+        // function login() {
+        //     document.getElementById('validationform').style.display = 'block';
+        // }
+
+
+
+
+    </script>
+</body>
+
+</html>

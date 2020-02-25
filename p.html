@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form action="" id="loginform">
+                    <label>username</label>
+                    <input type="text" id="usn" name="username"><br>
+                    <label>password</label>
+                    <input type="password" id="pwd" name="password"><br>
+                    <button type="button" id="register">register</button>
+                
+                </form> 
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form action="" id="registerform">
+                    <label>username</label>
+                    <input type="text" id="usn" name="username"><br>
+                    <label>password</label>
+                    <input type="password" id="pwd" name="password"><br>
+                   <button type="button" id="login ">Login</button>
+                    <!-- <a onclick=return false href=""  id="already">already register</a> -->
+                    <button type="button" id="registerbutton">already register</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginform').style.display="none";
+        document.getElementById('registerbutton').addEventListener('click',fun1);
+        function fun1(){
+            document.getElementById('loginform').style.display="block";
+            Document.getElementById('registerform').style.display="none";
+        }
+        //  document.getElementById('registerform').style.display="none";
+         document.getElementById('login').addEventListener('click',fun2);
+         function fun2(){
+            document.getElementById('registerform').style.display="block";
+            document.getElementById('registerbutton').style.display="none";
+         }
+    </script>
+    
+</body>
+</html>
